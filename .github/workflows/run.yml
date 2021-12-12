@@ -10,7 +10,12 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: "3.7"
-          cache: 'pip'
+      
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ hashFiles('update-role.py') }}-${{ hashFiles('requirements.txt') }}
+
       - run: pip install -r requirements.txt
       - name: "Update role"
         run: python update-role.py
