@@ -23,3 +23,4 @@ jobs:
           GUILD_ID: ${{ secrets.GUILD_ID }}
           ROLE_ID: ${{ secrets.ROLE_ID }}
           ADMIN_BOT_TOKEN: ${{ secrets.ADMIN_BOT_TOKEN }}
+          HCPING_ID: ${{ secrets.HCPING_ID }}
