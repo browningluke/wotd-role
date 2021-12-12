@@ -1,0 +1,15 @@
+name: update-role
+on: [push, pull_request]
+jobs:
+  update-role:
+    name: Update Role
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.7"
+          cache: 'pip'
+      - run: pip install -r requirements.txt
+      - run: python update_role.py
