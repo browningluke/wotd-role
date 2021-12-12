@@ -11,9 +11,9 @@ jobs:
         with:
           python-version: "3.7"
       - run: pip install -r requirements.txt
-      - name: run
+      - name: "Update role"
         run: python update-role.py
         env:
-          GUILD_ID: {{ secrets.GUILD_ID }}
-          ROLE_ID: {{ secrets.ROLE_ID }}
-          BOT_TOKEN: {{ secrets.BOT_TOKEN }}
+          GUILD_ID: ${{ secrets.GUILD_ID }}
+          ROLE_ID: ${{ secrets.ROLE_ID }}
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
