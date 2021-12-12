@@ -11,7 +11,8 @@ jobs:
         with:
           python-version: "3.7"
       - run: pip install -r requirements.txt
-      - run: python update-role.py
+      - name: run
+        run: python update-role.py
         env:
           GUILD_ID: {{ secrets.GUILD_ID }}
           ROLE_ID: {{ secrets.ROLE_ID }}
