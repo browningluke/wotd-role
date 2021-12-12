@@ -11,5 +11,4 @@ jobs:
         with:
           python-version: "3.7"
       - run: pip install -r requirements.txt
-      - run: ls
-      - run: python update_role.py
+      - run: python update-role.py
