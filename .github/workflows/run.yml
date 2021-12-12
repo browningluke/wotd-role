@@ -1,5 +1,7 @@
 name: update-role
-on: [push, pull_request]
+on:
+  schedule:
+    - cron:  '5 5,17 * * *'
 jobs:
   update-role:
     name: Update Role
