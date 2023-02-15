@@ -2,6 +2,8 @@ name: update-role
 on:
   schedule:
     - cron:  '5 5,17 * * *'
+  workflow_dispatch:
+
 jobs:
   update-role:
     name: Update Role
