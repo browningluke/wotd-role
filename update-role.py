@@ -9,7 +9,7 @@ BOT_TOKEN = os.getenv('ADMIN_BOT_TOKEN')
 Get word of the day
 '''
 resp = requests.get("https://www.merriam-webster.com/word-of-the-day")
-wotd = re.search(">(.*)(?=<\/h1)", resp.text)[1]
+wotd = re.search(">(.*)(?=<\/h2)", resp.text)[1]
 
 print(f"Word of the day: {wotd}")
 
