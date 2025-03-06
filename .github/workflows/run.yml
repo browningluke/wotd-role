@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: "3.10.15"
       
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: ~/.cache/pip
           key: ${{ hashFiles('update-role.py') }}-${{ hashFiles('requirements.txt') }}
